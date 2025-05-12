@@ -179,5 +179,5 @@ class ButtonBase extends HTMLElement {
   }
 }
 
-// Register the custom element with the browser
+// Register the custom element with the browser.
 customElements.define('vona-button', ButtonBase);

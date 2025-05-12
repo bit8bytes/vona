@@ -1,0 +1,12 @@
+{
+    "metadata": {
+        "source": "button.js",
+        "tags": ["web-component", "button", "accessibility"],
+        "variants": ["secondary", "outline", "ghost", "destructive", "disabled"]
+    },
+    "messages": [
+        { "role": "user", "content": "Produce a primary button with the content 'Hello!'." },
+        { "role": "assistant", "content": "````<vona-button>Hello!</vona-button>```" }
+    ]
+}
+  
