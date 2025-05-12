@@ -1,0 +1,56 @@
+/* 
+MIT License
+*/
+
+/* || THEME & FONTS*/
+:root {
+  --background: hsl(223.81 -173% 100%);
+  --muted-background: hsl(0 0% 100%);
+  --foreground: hsl(222.2 84% 4.9%);
+
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(222.2 84% 4.9%);
+
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(222.2 84% 4.9%);
+
+  --primary: hsl(240.02 6% 10%);
+  --primary-foreground: hsl(223.81 0% 98%);
+  --secondary: hsl(210 40% 96.1%);
+  --secondary-foreground: hsl(222.2 47.4% 11.2%);
+
+  --muted: hsl(210 40% 96.1%);
+  --muted-foreground: hsl(215.4 16.3% 46.9%);
+
+  --accent: hsl(210 40% 96.1%);
+  --accent-foreground: hsl(222.2 47.4% 11.2%);
+
+  --destructive: hsl(0 84.2% 60.2%);
+  --destructive-foreground: hsl(210 40% 98%);
+
+  --border: hsl(214.3 31.8% 91.4%);
+  --input: hsl(214.3 31.8% 91.4%);
+  --ring: 221.2 83.2% 53.3%;
+
+  --radius: 4px;
+  --gap: 4px;
+  --padding: 4px;
+
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --shadow: 0 1px 2px 0 var(--shadow-color);
+  --ring-offset-shadow: 0 0 transparent;
+  --ring-shadow: 0 0 transparent;
+
+  --info-color: var(--foreground);
+  --warning-color: orange;
+  --success-color: green;
+  --error-color: red;
+
+  --text-3xl: 48px;
+  --text-2xl: 28px;
+  --text-xl: 24px;
+  --text-large: 18px;
+  --text-base: 16px;
+  --text-small: 14px;
+  --text-xs: 12px;
+}
