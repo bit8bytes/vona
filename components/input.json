@@ -1,0 +1,12 @@
+{
+    "metadata": {
+        "source": "input.js",
+        "tags": ["web-component", "input"],
+        "variants": ["id", "type", "name", "value", "placeholder", "disabled"]
+    },
+    "messages": [
+        { "role": "user", "content": "Produce a inputbox with the label 'Name'" },
+        { "role": "assistant", "content": "```<vona-input>Name</vona-input>```" }
+    ]
+}
+  

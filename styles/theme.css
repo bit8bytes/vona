@@ -4,6 +4,9 @@ MIT License
 
 /* || THEME & FONTS*/
 :root {
+  --font-family: "Roboto", sans-serif;
+  --font-weight: 400;
+
   --background: hsl(223.81 -173% 100%);
   --muted-background: hsl(0 0% 100%);
   --foreground: hsl(222.2 84% 4.9%);

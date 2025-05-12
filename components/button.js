@@ -89,6 +89,7 @@ class ButtonBase extends HTMLElement {
           font-size: var(--text-small);
           font-weight: 500;
           padding: calc(var(--padding) * 2) calc(var(--padding) * 4);
+          font-family: var(--font-family, "Helvetica", Sans-Serif);
           cursor: pointer;
           color: var(--primary-foreground);
           background-color: var(--primary);
