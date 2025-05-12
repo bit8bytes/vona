@@ -1,6 +1,16 @@
+/**
+ * InputBase - A customizable input web component
+ * Can be used with forms due to formAssociated property
+ */
 class InputBase extends HTMLElement {
+  // Enable form association so this component can be used in forms
   static formAssociated = true;
 
+  /**
+   * Constructor - Initialize the component
+   * Calls render() to create the shadow DOM structure
+   * It attaches the internals for form association
+   */
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
@@ -8,28 +18,39 @@ class InputBase extends HTMLElement {
     this.render();
   }
 
+  /**
+   * connectedCallback - Lifecycle method called when element is added to DOM
+   * Sets up event listeners and applies attributes/styles based on element attributes
+   */
   connectedCallback() {
     this.input = this.shadowRoot.querySelector('input');
+
+    // Copy specified attributes from custom element to internal button element
     ['id', 'type', 'name', 'value', 'placeholder', 'disabled'].forEach((attr) => {
-      const attrValue = this.getAttribute(attr);
-      if (attrValue !== null) {
-        this.input.setAttribute(attr, attrValue);
+      const attrFromParent = this.getAttribute(attr);
+      if (attrFromParent !== null) {
+        this.input.setAttribute(attr, attrFromParent);
       }
     });
 
+    // Apply disabled state if the disabled attribute is present
     if (this.hasAttribute('disabled')) {
       this.input.disabled = true;
     }
 
+    // Set up event listeners for input changes
     this.input.addEventListener('input', () => {
       this.value = this.input.value;
     });
   }
 
+  /**
+   * render - Creates the HTML structure and styles for the input
+   */
   render() {
     this.shadowRoot.innerHTML = `
       <style>
-        .input {
+        .label {
           display: flex;
           flex-direction: column;
           width: 100%;
@@ -39,17 +60,17 @@ class InputBase extends HTMLElement {
           font-family: var(--font-family, "Helvetica", Sans-Serif);
         }
 
-        .input:focus-visible {
+        .label:focus-visible {
           outline: 2px solid var(--primary);
           outline-offset: 2px;
         }
 
-        .input input:disabled {
+        .label label:disabled {
           cursor: not-allowed;
           opacity: 50%;
         }
 
-        .input__text {
+        .input {
           padding: calc(var(--padding) * 2) calc(var(--padding) * 3);
           width: 100%;
           height: 40px;
@@ -59,15 +80,15 @@ class InputBase extends HTMLElement {
           background-color: var(--background);
         }
 
-        .input__text:focus-visible {
+        .input:focus-visible {
           border-radius: var(--radius);
           outline: 2px solid var(--primary);
           outline-offset: 2px;
         }
       </style>
-      <label class="input" tabindex="0">
+      <label class="label" tabindex="0">
         <slot></slot>
-        <input class="input__text" />
+        <input class="input" />
       </label>`;
   }
 
@@ -89,4 +110,5 @@ class InputBase extends HTMLElement {
   }
 }
 
+// Register the custom element with the browser.
 customElements.define('vona-input', InputBase);
