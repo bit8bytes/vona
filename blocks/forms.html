@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vona - Forms</title>
+    <link rel="stylesheet" href="../styles/theme.css" />
+    <link rel="stylesheet" href="../styles/utils.css" />
+  </head>
+  <body>
+    <form class="flex flex-col gap-4">
+      <vona-input name="email" value="hello@example.com">Email</vona-input>
+      <vona-textarea name="message" placeholder="Enter message..."
+        >Message</vona-textarea
+      >
+      <vona-button type="submit">Submit</vona-button>
+    </form>
+
+    <script src="../components/button.js"></script>
+    <script src="../components/input.js"></script>
+    <script src="../components/textarea.js"></script>
+
+    <script>
+      document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const data = new FormData(e.target);
+        console.log([...data.entries()]);
+      });
+    </script>
+  </body>
+</html>

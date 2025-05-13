@@ -8,15 +8,19 @@
     <link rel="stylesheet" href="styles/theme.css" />
   </head>
   <body>
-    <vona-button onclick='alert("Hello!")'>Hello from Vona!</vona-button>
-    <vona-button secondary>Secondary</vona-button>
-    <vona-button outline>Outline</vona-button>
+    <div>
+      <vona-button onclick='alert("Hello!")'>Hello from Vona!</vona-button>
+      <vona-button secondary>Secondary</vona-button>
+      <vona-button outline>Outline</vona-button>
+    </div>
 
     <div style="width: 400px">
-      <vona-input name="vona" placeholder="from Vona!">Hello!</vona-input>
+      <vona-input name="vona" placeholder="from Vona!">Input</vona-input>
+      <vona-textarea value="Bar" rows="10">Textarea</vona-textarea>
     </div>
 
     <script src="components/button.js"></script>
     <script src="components/input.js"></script>
+    <script src="components/textarea.js"></script>
   </body>
 </html>

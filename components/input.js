@@ -1,55 +1,51 @@
-/**
- * InputBase - A customizable input web component
- * Can be used with forms due to formAssociated property
- */
 class InputBase extends HTMLElement {
-  // Enable form association so this component can be used in forms
   static formAssociated = true;
 
-  /**
-   * Constructor - Initialize the component
-   * Calls render() to create the shadow DOM structure
-   * It attaches the internals for form association
-   */
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-    this.internals = this.attachInternals();
+    this._internals = this.attachInternals();
     this.render();
   }
 
-  /**
-   * connectedCallback - Lifecycle method called when element is added to DOM
-   * Sets up event listeners and applies attributes/styles based on element attributes
-   */
   connectedCallback() {
     this.input = this.shadowRoot.querySelector('input');
 
-    // Copy specified attributes from custom element to internal button element
+    // Copy and apply all relevant attributes
     ['id', 'type', 'name', 'value', 'placeholder', 'disabled'].forEach((attr) => {
-      const attrFromParent = this.getAttribute(attr);
-      if (attrFromParent !== null) {
-        this.input.setAttribute(attr, attrFromParent);
+      const value = this.getAttribute(attr);
+      if (value !== null) {
+        this.input.setAttribute(attr, value);
       }
     });
 
-    // Apply disabled state if the disabled attribute is present
-    if (this.hasAttribute('disabled')) {
-      this.input.disabled = true;
-    }
+    // Sync value with internal state
+    this._internals.setFormValue(this.input.value);
 
-    // Set up event listeners for input changes
     this.input.addEventListener('input', () => {
-      this.value = this.input.value;
+      this.value = this.input.value; // Triggers setter
     });
   }
 
-  /**
-   * render - Creates the HTML structure and styles for the input
-   */
+  static get observedAttributes() {
+    return ['value'];
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    if (name === 'value' && this.input) {
+      this.input.value = newValue;
+      this._internals.setFormValue(newValue);
+    }
+  }
+
   render() {
     this.shadowRoot.innerHTML = `
       <style>
+        :host {
+          font-size: var(--text-small, 14px);
+          font-family: var(--font-family, "Helvetica", sans-serif);
+        }
+          
         .label {
           display: flex;
           flex-direction: column;
@@ -57,7 +53,8 @@ class InputBase extends HTMLElement {
           font-size: var(--text-small);
           font-weight: 500;
           gap: var(--gap);
-          font-family: var(--font-family, "Helvetica", Sans-Serif);
+          font-size: inherit;
+          font-family: inherit;
         }
 
         .label:focus-visible {
@@ -78,6 +75,8 @@ class InputBase extends HTMLElement {
           border: 1px solid var(--border);
           border-radius: var(--radius);
           background-color: var(--background);
+          font-size: inherit;
+          font-family: inherit;
         }
 
         .input:focus-visible {
@@ -92,14 +91,22 @@ class InputBase extends HTMLElement {
       </label>`;
   }
 
+  // Value getter and setter
   get value() {
-    return this.input.value;
+    return this.input?.value || '';
   }
 
-  set value(value) {
-    this.input.value = value;
-    this.internals.setFormValue(value);
+  set value(val) {
+    if (this.input) {
+      this.input.value = val;
+      this._internals.setFormValue(val);
+    }
+    this.setAttribute('value', val); // keep attribute in sync
   }
+
+  get form() {
+    return this._internals?.form || null;
+  }  
 
   get name() {
     return this.getAttribute('name');
@@ -108,7 +115,26 @@ class InputBase extends HTMLElement {
   get type() {
     return this.getAttribute('type') || 'text';
   }
+
+  get validity() {
+    return this._internals.validity;
+  }
+
+  get validationMessage() {
+    return this._internals.validationMessage;
+  }
+
+  get willValidate() {
+    return this._internals.willValidate;
+  }
+
+  checkValidity() {
+    return this._internals.checkValidity();
+  }
+
+  reportValidity() {
+    return this._internals.reportValidity();
+  }
 }
 
-// Register the custom element with the browser.
 customElements.define('vona-input', InputBase);

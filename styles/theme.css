@@ -57,3 +57,8 @@ MIT License
   --text-small: 14px;
   --text-xs: 12px;
 }
+
+:host {
+  font-size: var(--text-small, 14px);
+  font-family: var(--font-family, "Helvetica", sans-serif);
+}
