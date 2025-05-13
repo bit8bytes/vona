@@ -6,8 +6,8 @@ import (
 )
 
 type Config struct {
-	ComponentsDir string `json:"components_dir"`
-	StylesDir     string `json:"styles_dir"`
+	Components string `json:"components"`
+	Styles     string `json:"styles"`
 }
 
 func loadConfig() (Config, error) {

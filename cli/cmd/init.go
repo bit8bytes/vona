@@ -8,12 +8,12 @@ import (
 
 func (cli *CLI) init() {
 	cfg := Config{
-		ComponentsDir: "components",
-		StylesDir:     "styles",
+		Components: "components",
+		Styles:     "styles",
 	}
 
-	os.MkdirAll(cfg.ComponentsDir, os.ModePerm)
-	os.MkdirAll(cfg.StylesDir, os.ModePerm)
+	os.MkdirAll(cfg.Components, os.ModePerm)
+	os.MkdirAll(cfg.Styles, os.ModePerm)
 
 	file, err := os.Create(configFileName)
 	if err != nil {

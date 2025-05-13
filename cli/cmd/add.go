@@ -13,7 +13,7 @@ func (cli *CLI) add(name string) {
 		os.Exit(1)
 	}
 
-	componentFile := filepath.Join(cfg.ComponentsDir, name+".js")
+	componentFile := filepath.Join(cfg.Components, name+".js")
 
 	// TODO: fetch the component from a remote repository or embedded source
 	err = os.WriteFile(componentFile, []byte("Hello"), 0644)
