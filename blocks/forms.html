@@ -9,8 +9,14 @@
   </head>
   <body>
     <form class="flex flex-col gap-4">
-      <vona-input name="email" value="hello@example.com">Email</vona-input>
-      <vona-textarea name="message" placeholder="Enter message..."
+      <vona-input name="email" type="text" required minlength="2"
+        >Email</vona-input
+      >
+      <vona-textarea
+        name="message"
+        placeholder="Enter message..."
+        required
+        minlength="10"
         >Message</vona-textarea
       >
       <vona-button type="submit">Submit</vona-button>
@@ -22,8 +28,14 @@
 
     <script>
       document.querySelector("form").addEventListener("submit", (e) => {
+        const form = e.target;
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return e.preventDefault();
+        }
+
         e.preventDefault();
-        const data = new FormData(e.target);
+        const data = new FormData(form);
         console.log([...data.entries()]);
       });
     </script>

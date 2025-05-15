@@ -3,7 +3,7 @@ class ButtonBase extends HTMLElement {
 
   constructor() {
     super();
-    this._internals = this.attachInternals(); // required for form association
+    this._internals = this.attachInternals();
     this.attachShadow({ mode: 'open' });
     this.render();
   }
@@ -11,7 +11,6 @@ class ButtonBase extends HTMLElement {
   connectedCallback() {
     this.button = this.shadowRoot.querySelector('button');
 
-    // Copy attributes from host to internal button
     ['type', 'name', 'disabled'].forEach((attr) => {
       const val = this.getAttribute(attr);
       if (val !== null) {
@@ -19,7 +18,6 @@ class ButtonBase extends HTMLElement {
       }
     });
 
-    // Handle click: submit or reset the form
     this.button.addEventListener('click', () => {
       const type = this.getAttribute('type') || 'submit';
 
@@ -30,7 +28,6 @@ class ButtonBase extends HTMLElement {
       }
     });
 
-    // Apply style variants
     if (this.hasAttribute('secondary')) {
       this.button.classList.add('button--secondary');
     }

@@ -1,40 +1,61 @@
 class InputBase extends HTMLElement {
   static formAssociated = true;
 
+  static get observedAttributes() {
+    return ['value', 'required', 'minlength', 'maxlength', 'pattern', 'name', 'type', 'placeholder', 'disabled'];
+  }
+
   constructor() {
     super();
-    this.attachShadow({ mode: 'open' });
     this._internals = this.attachInternals();
+    this.attachShadow({ mode: 'open' });
     this.render();
   }
 
   connectedCallback() {
     this.input = this.shadowRoot.querySelector('input');
-
-    // Copy and apply all relevant attributes
-    ['id', 'type', 'name', 'value', 'placeholder', 'disabled'].forEach((attr) => {
-      const value = this.getAttribute(attr);
-      if (value !== null) {
-        this.input.setAttribute(attr, value);
-      }
-    });
-
-    // Sync value with internal state
+    this.syncAttributes();
     this._internals.setFormValue(this.input.value);
 
     this.input.addEventListener('input', () => {
-      this.value = this.input.value; // Triggers setter
+      this._internals.setFormValue(this.input.value);
+      this.updateValidity();
     });
+
+    this.updateValidity();
   }
 
-  static get observedAttributes() {
-    return ['value'];
+  attributeChangedCallback(name, newValue) {
+    if (this.input && newValue !== null) {
+      this.input.setAttribute(name, newValue);
+      if (name === 'value') {
+        this.input.value = newValue;
+        this._internals.setFormValue(newValue);
+        this.updateValidity();
+      }
+    }
   }
 
-  attributeChangedCallback(name, oldValue, newValue) {
-    if (name === 'value' && this.input) {
-      this.input.value = newValue;
-      this._internals.setFormValue(newValue);
+  syncAttributes() {
+    for (const attr of InputBase.observedAttributes) {
+      const val = this.getAttribute(attr);
+      if (val !== null) {
+        this.input.setAttribute(attr, val);
+      }
+    }
+  }
+
+  updateValidity() {
+    if (!this.input) return;
+
+    if (this.input.validity.valid) {
+      this._internals.setValidity({});
+    } else {
+      this._internals.setValidity(
+        { customError: true },
+        this.input.validationMessage,
+        this.input
+      );
     }
   }
 
@@ -88,25 +109,13 @@ class InputBase extends HTMLElement {
       <label class="label" tabindex="0">
         <slot></slot>
         <input class="input" />
-      </label>`;
-  }
-
-  // Value getter and setter
-  get value() {
-    return this.input?.value || '';
-  }
-
-  set value(val) {
-    if (this.input) {
-      this.input.value = val;
-      this._internals.setFormValue(val);
-    }
-    this.setAttribute('value', val); // keep attribute in sync
+      </label>
+    `;
   }
 
   get form() {
-    return this._internals?.form || null;
-  }  
+    return this._internals.form;
+  }
 
   get name() {
     return this.getAttribute('name');
@@ -114,6 +123,27 @@ class InputBase extends HTMLElement {
 
   get type() {
     return this.getAttribute('type') || 'text';
+  }
+
+  get value() {
+    return this.input?.value || '';
+  }
+
+  set value(val) {
+    this.setAttribute('value', val);
+    if (this.input) {
+      this.input.value = val;
+      this._internals.setFormValue(val);
+      this.updateValidity();
+    }
+  }
+
+  checkValidity() {
+    return this._internals.checkValidity();
+  }
+
+  reportValidity() {
+    return this._internals.reportValidity();
   }
 
   get validity() {
@@ -126,14 +156,6 @@ class InputBase extends HTMLElement {
 
   get willValidate() {
     return this._internals.willValidate;
-  }
-
-  checkValidity() {
-    return this._internals.checkValidity();
-  }
-
-  reportValidity() {
-    return this._internals.reportValidity();
   }
 }
 
