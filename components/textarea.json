@@ -1,0 +1,12 @@
+{
+    "metadata": {
+        "source": "textarea.js",
+        "tags": ["web-component", "textarea"],
+        "variants": ["id", "readonly", "required", "name", "value", "placeholder", "disabled"]
+    },
+    "messages": [
+        { "role": "user", "content": "Produce a textarea with the label 'Message'" },
+        { "role": "assistant", "content": "```<vona-textarea>Message</vona-textarea>```" }
+    ]
+}
+  
