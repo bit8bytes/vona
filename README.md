@@ -26,7 +26,7 @@ Vona makes it easier for developers and entrepreneurs to validate their ideas wi
 
 ### 🔮 Vona future (App Ready)
 
-The time implementing this components takes days not months because of a prior achieved project ([SIMPLIFY.ui](https://github.com/TobiasGleiter/SIMPLIFY.ui)).
+Implementing these components takes days, not months, thanks to insights and experience gained from a previous project — ([SIMPLIFY.ui](https://github.com/TobiasGleiter/SIMPLIFY.ui)).
 
 - [ ] Dialog/Modal
 - [ ] Dropdown
