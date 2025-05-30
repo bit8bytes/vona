@@ -4,7 +4,7 @@
 
 <p align="center"> <img src="/docs/img/vona.png" alt="Validate your ideas with a lightweight UI library for simple landing pages and email signups." width="350"/></p>
 
-Vona makes it easier for developers and entrepreneurs to validate their ideas with a ready-to-use, dependency-free UI library built for creating simple landing pages with email list signups. See our problem statement [here](/docs/PROBLEM.md) and design ideas [here](/docs/img/vona-blocks-hero.png).
+Vona makes it easier for developers and entrepreneurs to validate their ideas with a ready-to-use, dependency-free UI library built for creating simple landing pages with email list signups. See our problem statement [here](/docs/PROBLEM.md) and design ideas [here](/docs/DESIGN.md).
 
 ## 🚴🏽‍♂️ Roadmap
 
