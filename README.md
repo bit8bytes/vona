@@ -2,9 +2,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-<p align="center"> <img src="/img/vona.png" alt="Replace TailwindCSS and ShadCN with Vona — the first AI-friendly, lightweight UI library built with native Web Components and plain CSS." width="350"/></p>
+<p align="center"> <img src="/docs/img/vona.png" alt="Validate your ideas with a lightweight UI library for simple landing pages and email signups." width="350"/></p>
 
-Vona makes it easier for developers and entrepreneurs to validate their ideas with a ready-to-use, dependency-free UI library built for creating simple landing pages with email list signups. See our problem statement [here](/docs/PROBLEM.md).
+Vona makes it easier for developers and entrepreneurs to validate their ideas with a ready-to-use, dependency-free UI library built for creating simple landing pages with email list signups. See our problem statement [here](/docs/PROBLEM.md) and design ideas [here](/docs/img/vona-blocks-hero.png).
 
 ## 🚴🏽‍♂️ Roadmap
 
