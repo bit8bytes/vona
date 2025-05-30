@@ -91,7 +91,6 @@ class InputBase extends HTMLElement {
         .input {
           padding: calc(var(--padding) * 2) calc(var(--padding) * 3);
           width: 100%;
-          height: 40px;
           box-sizing: border-box;
           border: 1px solid var(--border);
           border-radius: var(--radius);
