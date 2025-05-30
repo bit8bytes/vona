@@ -4,7 +4,7 @@
 
 <p align="center"> <img src="/img/vona.png" alt="Replace TailwindCSS and ShadCN with Vona — the first AI-friendly, lightweight UI library built with native Web Components and plain CSS." width="350"/></p>
 
-Vona makes it easier for developers and entrepreneurs to validate their ideas with a ready-to-use, dependency-free UI library built for creating simple landing pages with email list signups.
+Vona makes it easier for developers and entrepreneurs to validate their ideas with a ready-to-use, dependency-free UI library built for creating simple landing pages with email list signups. See our problem statement [here](/docs/PROBLEM.md).
 
 ## 🚴🏽‍♂️ Roadmap
 
@@ -52,3 +52,5 @@ Any component missing? Send a message to @TobiasGleiter
     </td>
   </tr>
 </table>
+
+Contributions of any kind are welcome!
