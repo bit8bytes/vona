@@ -7,6 +7,17 @@ MIT License
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active,
+a:visited {
+  text-decoration: none;
+}
+
 /* || THEME & FONTS*/
 :root {
   --font-family: "Roboto", sans-serif;
