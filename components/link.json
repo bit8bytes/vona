@@ -1,0 +1,12 @@
+{
+    "metadata": {
+        "source": "link.js",
+        "tags": ["web-component", "link"],
+        "variants": ["id", "type", "name", "value", "placeholder", "disabled"]
+    },
+    "messages": [
+        { "role": "user", "content": "Produce a link with the label 'Features'" },
+        { "role": "assistant", "content": "```<vona-link>Features</vona-link>```" }
+    ]
+}
+  
