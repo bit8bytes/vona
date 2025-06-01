@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vona - Hero</title>
+  </head>
+  <link rel="stylesheet" href="../styles/utils.css" />
+  <style>
+    :root {
+      --font-family: "Roboto", sans-serif;
+      --primary: hsl(240.02 6% 10%);
+      --primary-hover: hsl(240.02 6% 20%);
+      --primary-foreground: hsl(223.81 0% 98%);
+      --secondary: hsl(210 40% 96.1%);
+      --secondary-hover: hsl(210 40% 95.1%);
+      --secondary-foreground: hsl(222.2 47.4% 11.2%);
+    }
+  </style>
+  <body>
+    <vona-block-hero>
+      <span slot="headline"
+        >Launch fast with plug-and-play landing page UI blocks.</span
+      >
+      <span slot="description">
+        Vona helps developers and entrepreneurs validate ideas quickly with a
+        ready-to-use, dependency-free UI library for simple landing pages and
+        email signups.
+      </span>
+      <a slot="primary" href="mailto:john@doe.com">Get Email updates</a>
+      <a slot="secondary" href="#">Learn more</a>
+    </vona-block-hero>
+    <script src="../blocks/hero.js" defer></script>
+  </body>
+</html>
