@@ -8,13 +8,6 @@ Vona makes it easier for developers and entrepreneurs to validate their ideas wi
 
 ## 🚴🏽‍♂️ Roadmap
 
-### ✅ Vona Components (Landing Ready)
-
-- [x] Button
-- [x] Input
-- [x] Textarea
-- [ ] Utility CSS (using Tailwind CSS syntax)
-
 ### 🔧 Vona Blocks (Landing Ready)
 
 - [x] Header (with logo and menu)
@@ -23,6 +16,13 @@ Vona makes it easier for developers and entrepreneurs to validate their ideas wi
 - [ ] Feature list (e.g. “Why Vona”)
 - [ ] Call to action (CTA) section
 - [ ] Footer (with links and attribution)
+
+### ✅ Vona Components (Landing Ready)
+
+- [x] Button
+- [x] Input
+- [x] Textarea
+- [ ] Utility CSS (using Tailwind CSS syntax)
 
 ### 🔮 Vona future (App Ready)
 
