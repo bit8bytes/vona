@@ -10,8 +10,8 @@ Vona makes it easier for developers and entrepreneurs to validate their ideas wi
 
 ### 🔧 Vona Blocks (Landing Ready)
 
-- [x] Header (with logo and menu)
-- [x] Hero section
+- [ ] Header (with logo and menu)
+- [x] Hero section (Headline, Description, 2x CTA Buttons)
 - [ ] Email signup form
 - [ ] Feature list (e.g. “Why Vona”)
 - [ ] Call to action (CTA) section
