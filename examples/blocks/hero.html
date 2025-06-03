@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vona - Hero</title>
   </head>
-  <script src="https://cdn.jsdelivr.net/gh/bit8bytes/vona@latest/dist/vona-blocks.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <style>
     :root {
       --font-family: "Roboto", sans-serif;
-      --primary: hsl(240.02 6% 10%);
-      --primary-hover: hsl(240.02 6% 20%);
-      --primary-foreground: hsl(223.81 0% 98%);
-      --secondary: hsl(210 40% 96.1%);
-      --secondary-hover: hsl(210 40% 95.1%);
-      --secondary-foreground: hsl(222.2 47.4% 11.2%);
+      --color-primary: hsl(240.02 6% 10%);
+      --color-primary-foreground: hsl(223.81 0% 98%);
+      --color-secondary: oklch(96.7% 0.003 264.542);
+      --color-secondary-foreground: hsl(222.2 47.4% 11.2%);
+      --color-muted: hsl(210 40% 96.1%);
+      --color-muted-foreground: hsl(240.08 6% 64%);
     }
   </style>
   <body>
@@ -27,9 +27,9 @@
         ready-to-use, dependency-free UI library for simple landing pages and
         email signups.
       </span>
-      <a slot="primary" href="mailto:john@doe.com">Get Email updates</a>
-      <a slot="secondary" href="#">Learn more</a>
+      <a slot="primary" href="#updates">Get Email updates</a>
+      <a slot="secondary" href="#get-started">Get Started</a>
     </vona-block-hero>
-    <!-- <script src="../../dist/blocks/hero.js" defer></script> -->
+    <script src="../../dist/blocks/hero.js" defer></script>
   </body>
 </html>
