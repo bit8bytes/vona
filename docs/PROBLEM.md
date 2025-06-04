@@ -18,7 +18,7 @@ This mainly affects developers and entrepreneurs who bootstrap their projects.
 
 ## How do I solve this problem?
 
-The solution to this problem is a lightweight UI library (Vona) that uses just Web-Components, CSS and JavaScript and is therefore dependency free. Vona will come with a utility CSS file that follows Tailwind CSS syntax. This makes it possible to migrate from Tailwind CSS to Vona.
+The solution to this problem are ready-to-use, dependency-free UI library for simple landing pages and email signups. Vona needs to be installed fast e.g. using a CDN or copy-and-paste. Vona will follows Tailwind CSS syntax. This makes it possible to migrate from Vona to Tailwind CSS later.
 
 ## Why are the maintainers the right people to solve this problem?
 
@@ -26,7 +26,7 @@ We are the right people, because we deeply want to develop things that are simpl
 
 ## What we expect to happen
 
-At the beginning we expect that fewer people are interested because JavaScrupt frameworks domintate the internet. But we deeply know, considering security and performance, that Vona will outperform any other UI library especially for setting up a landing page. We know it will be a hassle-free to migrate from Tailwind CSS to Vona because of the similar syntax.
+At the beginning we expect that fewer people are interested because JavaScrupt frameworks domintate the internet. But we deeply know, considering security and performance, that Vona will outperform any other UI library especially for setting up a landing page.
 
 If we even look further, we know that less dependencies means simplicity and better maintainability and more focus on what matters: The business logic. If we see adoption through the space there will be no way that Vona won't be used for big software products because of the simplicity and maintainability.
 
