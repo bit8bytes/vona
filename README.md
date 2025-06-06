@@ -11,6 +11,8 @@ Copy HTML, Add Pico CSS and Vona CSS, change your content, and deploy.
 ## Table of contents
 
 - [Getting Started](#quick-start)
+- [Contributing](#contributing)
+- [Copyright and license](copyright-and-license)
 
 ## Quick Start
 
