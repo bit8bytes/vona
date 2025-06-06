@@ -2,55 +2,68 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-<p align="center"> <img src="/docs/img/vona.png" alt="Validate your ideas with a lightweight UI library for simple landing pages and email signups." width="350"/></p>
+## Plug-and-play landing page UI blocks.
 
-Vona makes it easier for developers and entrepreneurs to validate their ideas with a ready-to-use, dependency-free UI library built for creating simple landing pages with email list signups. See our problem statement [here](/docs/PROBLEM.md) and design ideas [here](/docs/DESIGN.md).
+A minimalist and lightweight starter kit that that utilises Pico for beautiful plug-and-play landing page UI blocks.
 
-## 🚴🏽‍♂️ Roadmap
+Copy HTML, Add Pico CSS and Vona CSS, change your content, and deploy.
 
-### 🔧 Vona Blocks (Landing Ready)
+## Table of contents
 
-- [x] Hero section (Headline, Description, 2x CTA Buttons)
-- [ ] Header (with logo and menu)
-- [ ] Email signup form
-- [ ] Feature list (e.g. “Why Vona”)
-- [ ] Call to action (CTA) section
-- [ ] Footer (with links and attribution)
+- [Getting Started](#quick-start)
 
-### ✅ Vona Components (Landing Ready)
+## Quick Start
 
-- [x] Button
-- [x] Input
-- [x] Textarea
-- [ ] Utility CSS (using Tailwind CSS syntax)
+There are two ways to include vona.css:
 
-### 🔮 Vona future (App Ready)
+### Install manually
 
-Implementing these components takes days, not months, thanks to insights and experience gained from a previous project — ([SIMPLIFY.ui](https://github.com/TobiasGleiter/SIMPLIFY.ui)).
+Download Pico and Vona and link both in the <head> of your website.
 
-- [ ] Dialog/Modal
-- [ ] Dropdown
-- [ ] Badge
-- [ ] Accordion
-- [ ] Link
-- [ ] Select
-- [ ] Card
-- [ ] Popover
-- [ ] Hover
-- [ ] Pagination
-- [ ] Checkbox
-- [ ] Avatar
+```html
+<link rel="stylesheet" href="css/pico.min.css" />
+<link rel="stylesheet" href="css/vona.min.css" />
+```
 
-Any component missing? Send a message to @TobiasGleiter
+### Usage from CDN
 
-## ✨ Contributors
+Alternatively, you can use jsDelivr CDN to link pico.css and vona.css.
 
-<table>
-  <tr>
-    <td align="center">
-      <img src="https://avatars.githubusercontent.com/tobiasgleiter" width="64px" style="border-radius: 50%;" alt="Contributor Avatar"/>
-    </td>
-  </tr>
-</table>
+```html
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/bit8bytes/vona@v0.0.3/dist/vona.min.css"
+/>
+```
 
-Contributions of any kind are welcome!
+### Starter HTML template
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/pico.min.css" />
+    <link rel="stylesheet" href="css/vona.min.css" />
+    <title>My Vona Page</title>
+  </head>
+  <body class="vona">
+    <main class="container">
+      <h1>Hello Vona!</h1>
+    </main>
+  </body>
+</html>
+```
+
+## Contributing
+
+If you are interested in contributing to Vona CSS, please send a email to <a href="mailto:gleiter.tobias@gmail.com">gleiter.tobias@gmail.com</a>.
+
+## Copyright and license
+
+Licensed under the [MIT License](https://github.com/bit8bytes/vona/blob/main/LICENSE).
