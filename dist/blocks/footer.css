@@ -1,0 +1,38 @@
+.vona footer {
+  padding-block: 3rem;
+  background-color: var(--pico-background-color, #f8f9fa);
+  font-size: 0.8125rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.vona footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.vona footer nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-width: 9rem;
+  text-align: left;
+  align-items: flex-start;
+  font-size: 0.75rem;
+}
+
+.vona footer nav li {
+  padding: 0.25rem;
+}
+
+.vona footer a {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.vona footer nav li strong {
+  font-size: 0.8125rem;
+}

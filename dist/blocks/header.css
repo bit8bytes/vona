@@ -1,0 +1,23 @@
+.vona header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vona header > a {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.vona header nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.vona header nav li {
+  margin: 0;
+}

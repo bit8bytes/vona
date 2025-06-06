@@ -14,6 +14,10 @@
   gap: 1rem;
 }
 
+.vona section[data-block="hero"] > hgroup > h1 {
+  font-size: 2.5rem;
+}
+
 .vona section[data-block="hero"] > menu {
   display: flex;
   flex-wrap: wrap;
