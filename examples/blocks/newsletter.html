@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vona - Email CTA</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.amber.min.css"
+    />
+    <link rel="stylesheet" href="../../dist/blocks/newsletter.css" />
+  </head>
+  <body class="vona container">
+    <main>
+      <section data-block="newsletter" aria-label="newsletter">
+        <hgroup>
+          <h2>Newsletter</h2>
+          <p>Join our community of subscribers and recieve regular updates</p>
+        </hgroup>
+        <form action="/subscribe" method="POST">
+          <label for="newsletter-email">Email address</label>
+          <input
+            type="email"
+            name="email"
+            id="newsletter-email"
+            placeholder="john@doe.com"
+            aria-label="Email address"
+            required
+          />
+          <button>Join</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

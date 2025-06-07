@@ -74,6 +74,7 @@ Alternatively, you can use jsDelivr CDN to link pico.css and vona.css.
 - [Header](https://vona.bit8bytes.com/docs/blocks/header)
 - [Hero](https://vona.bit8bytes.com/docs/blocks/hero)
 - [Features](https://vona.bit8bytes.com/docs/blocks/features)
+- [Newsletter](https://vona.bit8bytes.com/docs/blocks/newsletter)
 - [Footer](https://vona.bit8bytes.com/docs/blocks/footer)
 
 ## Contributing
