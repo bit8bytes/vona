@@ -1,27 +1,27 @@
-.vona header {
+.vona [block="header"] {
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
   display: flex;
   position: fixed;
-  max-height: 6rem;
   align-items: center;
   transition: all 0.3s ease;
   backdrop-filter: blur(20px);
   justify-content: space-between;
+  max-height: calc(6 * var(--pico-spacing));
   padding-left: var(--pico-spacing);
   padding-right: var(--pico-spacing);
   -webkit-backdrop-filter: blur(20px);
 }
 
-.vona header > a {
+.vona header[block="header"] > a {
   font-size: 1.25rem;
   font-weight: 600;
   text-decoration: none;
 }
 
-.vona header nav ul {
+.vona header[block="header"] nav ul {
   display: flex;
   gap: 1rem;
   list-style: none;
@@ -29,6 +29,6 @@
   padding: 0;
 }
 
-.vona header nav li {
+.vona header[block="header"] nav li {
   margin: 0;
 }

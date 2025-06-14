@@ -1,0 +1,4 @@
+.vona main {
+  /* Header height*/
+  padding-top: calc(6 * var(--pico-spacing));
+}
