@@ -1,7 +1,17 @@
 .vona header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
   display: flex;
-  justify-content: space-between;
+  position: fixed;
+  max-height: 6rem;
   align-items: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(20px);
+  justify-content: space-between;
+  padding-left: var(--pico-spacing);
+  padding-right: var(--pico-spacing);
 }
 
 .vona header > a {
