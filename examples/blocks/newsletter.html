@@ -17,17 +17,16 @@
           <h2>Newsletter</h2>
           <p>Join our community of subscribers and recieve regular updates</p>
         </hgroup>
-        <form action="/subscribe" method="POST">
-          <label for="newsletter-email">Email address</label>
-          <input
-            type="email"
-            name="email"
-            id="newsletter-email"
-            placeholder="john@doe.com"
-            aria-label="Email address"
-            required
-          />
-          <button>Join</button>
+        <form>
+          <fieldset role="group">
+            <input
+              name="email"
+              type="email"
+              placeholder="Enter your email"
+              autocomplete="email"
+            />
+            <input type="submit" value="Subscribe" />
+          </fieldset>
         </form>
       </section>
     </main>
