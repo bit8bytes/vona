@@ -133,8 +133,15 @@
           <p>Join our community of subscribers and recieve regular updates</p>
         </hgroup>
         <form>
-          <input placeholder="john@doe.com" />
-          <button>Join</button>
+          <fieldset role="group">
+            <input
+              name="email"
+              type="email"
+              placeholder="Enter your email"
+              autocomplete="email"
+            />
+            <input type="submit" value="Subscribe" />
+          </fieldset>
         </form>
       </section>
     </main>
