@@ -1,17 +1,22 @@
-.vona footer {
-  padding-block: 3rem;
-  background-color: var(--pico-background-color, #f8f9fa);
+.vona [data-block="footer"] {
+  padding: 0;
+  background-color: var(--pico-background-color);
   font-size: 0.8125rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.vona footer nav {
+/* First section - Links */
+.vona [data-block="footer"] section:first-child {
+  padding-block: calc(var(--pico-spacing) * 3);
+  border-top: var(--pico-border-width) solid var(--pico-muted-border-color);
+}
+
+.vona [data-block="footer"] section:first-child nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.vona footer nav ul {
+.vona [data-block="footer"] section:first-child nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -19,20 +24,92 @@
   flex-direction: column;
   gap: 0;
   min-width: 9rem;
-  text-align: left;
-  align-items: flex-start;
   font-size: 0.75rem;
+  align-items: flex-start;
 }
 
-.vona footer nav li {
-  padding: 0.25rem;
+.vona [data-block="footer"] section:first-child nav li {
+  padding: calc(var(--pico-spacing) * 0.25);
 }
 
-.vona footer a {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
-
-.vona footer nav li strong {
+.vona [data-block="footer"] section:first-child nav li strong {
   font-size: 0.8125rem;
+}
+
+/* Second section - Company info */
+.vona [data-block="footer"] section:last-child {
+  padding: calc(var(--pico-spacing) * 2) 0;
+  border-top: var(--pico-border-width) solid var(--pico-muted-border-color);
+  background-color: var(--pico-card-background-color);
+}
+
+.vona [data-block="footer"] section:last-child nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: calc(var(--pico-spacing) * 2);
+  flex-wrap: wrap;
+}
+
+.vona [data-block="footer"] section:last-child nav > div:first-child {
+  flex: 1;
+  max-width: 400px;
+}
+
+.vona [data-block="footer"] section:last-child h3 {
+  margin: 0 0 calc(var(--pico-spacing) * 0.5) 0;
+  font-size: 1.5rem;
+}
+
+.vona [data-block="footer"] section:last-child p {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.vona [data-block="footer"] section:last-child nav > div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--pico-spacing);
+}
+
+.vona [data-block="footer"] section:last-child address {
+  font-style: normal;
+  margin: 0;
+}
+
+.vona [data-block="footer"] section:last-child ul {
+  display: flex;
+  gap: var(--pico-spacing);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vona [data-block="footer"] section:last-child ul svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.vona [data-block="footer"] section:last-child nav:last-child {
+  justify-content: start;
+  padding-top: var(--pico-spacing);
+  margin-top: var(--pico-spacing);
+  border-top: var(--pico-border-width) solid var(--pico-muted-border-color);
+}
+
+@media (max-width: 768px) {
+  .vona [data-block="footer"] section:first-child nav {
+    flex-direction: column;
+    gap: var(--pico-spacing);
+  }
+
+  .vona [data-block="footer"] section:first-child nav ul {
+    min-width: auto;
+  }
+
+  .vona [data-block="footer"] section:last-child nav {
+    flex-direction: column;
+    gap: calc(var(--pico-spacing) * 1.5);
+  }
 }
