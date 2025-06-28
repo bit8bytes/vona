@@ -12,18 +12,22 @@
   </head>
   <body class="vona container">
     <main>
-      <section data-block="newsletter" aria-label="newsletter">
-        <hgroup>
+      <section class="newsletter" aria-label="newsletter">
+        <hgroup class="newsletter__heading">
           <h2>Newsletter</h2>
-          <p>Join our community of subscribers and recieve regular updates</p>
+          <p>Join our community of subscribers and receive regular updates</p>
         </hgroup>
-        <form>
+
+        <form class="newsletter__form">
+          <label for="newsletter-email">Email address</label>
           <fieldset role="group">
             <input
+              id="newsletter-email"
               name="email"
               type="email"
               placeholder="Enter your email"
               autocomplete="email"
+              required
             />
             <input type="submit" value="Subscribe" />
           </fieldset>

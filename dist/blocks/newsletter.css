@@ -1,4 +1,5 @@
-.vona section[data-block="newsletter"] {
+/* newsletter.css */
+.vona .newsletter {
   padding-block: 6rem;
   text-align: left;
   padding-inline: 2rem;
@@ -8,7 +9,8 @@
   flex-direction: column;
 }
 
-.vona section[data-block="newsletter"] > hgroup {
+/* Heading box */
+.vona .newsletter__heading {
   background-color: var(--pico-card-background-color);
   border-top-left-radius: var(--pico-border-radius);
   border-top-right-radius: var(--pico-border-radius);
@@ -19,7 +21,8 @@
   margin: 0;
 }
 
-.vona section[data-block="newsletter"] > form {
+/* Form container */
+.vona .newsletter__form {
   display: flex;
   flex-direction: row;
   gap: var(--pico-spacing);
@@ -34,7 +37,8 @@
   padding-bottom: 2rem;
 }
 
-.vona section[data-block="newsletter"] > form > label {
+/* Visually hidden label for accessibility */
+.vona .newsletter__form label {
   position: absolute !important;
   width: 1px !important;
   height: 1px !important;

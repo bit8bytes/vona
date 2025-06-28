@@ -1,4 +1,5 @@
-.vona [data-block="header"] {
+/* header.css */
+.vona .header {
   top: 0;
   left: 0;
   width: 100%;
@@ -6,22 +7,28 @@
   display: flex;
   position: fixed;
   align-items: center;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(20px);
   justify-content: space-between;
-  max-height: calc(6 * var(--pico-spacing));
+  max-height: calc(4 * var(--pico-spacing));
   padding-left: var(--pico-spacing);
   padding-right: var(--pico-spacing);
-  -webkit-backdrop-filter: blur(20px);
+  border-bottom: var(--pico-border-width) solid var(--pico-muted-border-color);
+  background-color: var(--pico-background-color);
+  font-size: calc(0.6125 * var(--pico-font-size));
 }
 
-.vona header[data-block="header"] > a {
-  font-size: 1.25rem;
+.vona .header__logo {
+  display: flex;
+  align-items: center;
+  margin-right: var(--pico-spacing);
   font-weight: 600;
-  text-decoration: none;
 }
 
-.vona header[data-block="header"] nav ul {
+.vona .header__logo a {
+  text-decoration-color: transparent;
+}
+
+.vona .header__nav-primary ul,
+.vona .header__nav-auth ul {
   display: flex;
   gap: 1rem;
   list-style: none;
@@ -29,6 +36,100 @@
   padding: 0;
 }
 
-.vona header[data-block="header"] nav li {
+.vona .header__nav-primary li,
+.vona .header__nav-auth li {
   margin: 0;
+}
+
+.vona .header__nav-auth button {
+  font-size: calc(0.6125 * var(--pico-font-size));
+}
+
+/* Mobile Menu */
+.vona .header__mobile-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .vona .header,
+  .vona .header__nav-auth button {
+    font-size: calc(0.8125 * var(--pico-font-size));
+  }
+
+  .vona .header__nav-primary,
+  .vona .header__nav-auth {
+    display: none;
+  }
+
+  .vona .header__mobile-menu {
+    display: flex;
+    align-items: center;
+    /* position: relative; */
+    z-index: 100;
+  }
+
+  .vona .header__mobile-menu[open] {
+    margin-bottom: 0px;
+  }
+
+  .vona .header__mobile-menu summary {
+    padding: 1rem;
+    cursor: pointer;
+    margin-top: 0.6125rem;
+    font-size: 1.25rem;
+  }
+
+  .vona .header__mobile-menu summary::after {
+    content: none;
+    display: none;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  .vona .header__mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    gap: 0;
+    top: calc(4 * var(--pico-spacing));
+    left: 0;
+    width: 100vw;
+    background: var(--pico-background-color);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 99;
+    border-bottom: var(--pico-border-width) solid var(--pico-muted-border-color);
+  }
+
+  .vona .header__mobile-menu li {
+    display: flex;
+    width: 100%;
+    text-align: left;
+  }
+
+  .vona .header__mobile-menu a {
+    display: flex;
+    width: 100%;
+    padding: var(--pico-spacing);
+    text-align: left;
+    text-decoration: none;
+    color: var(--pico-color);
+    background: none;
+    border: none;
+  }
+
+  .vona .header__mobile-menu li:last-child {
+    display: flex;
+    gap: var(--pico-spacing);
+    margin: var(--pico-spacing);
+  }
+
+  .vona .header__mobile-menu a:hover {
+    color: var(--pico-color);
+  }
+
+  .vona .header__mobile-menu-auth button {
+    font-size: calc(0.8125 * var(--pico-font-size));
+  }
 }

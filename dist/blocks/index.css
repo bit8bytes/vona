@@ -1,3 +1,11 @@
+.vona {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .vona main {
   /* Header height*/
   padding-top: calc(6 * var(--pico-spacing));

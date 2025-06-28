@@ -1,4 +1,5 @@
-.vona section[data-block="features"] {
+/* features.css */
+.vona .features {
   padding-block: 6rem;
   text-align: center;
   padding-inline: 2rem;
@@ -9,14 +10,16 @@
   gap: var(--pico-typography-spacing-vertical);
 }
 
-.vona section[data-block="features"] > div > article {
+/* Feature articles */
+.vona .features__grid article {
   border-radius: var(--pico-border-radius);
   border: var(--pico-border-width) solid
     color-mix(in srgb, var(--pico-muted-color) 30%, transparent);
   text-align: left;
+  padding: var(--pico-spacing);
 }
 
-.vona section[data-block="features"] > div > article > svg {
+.vona .features__grid article svg {
   width: 24px;
   height: 24px;
   margin-bottom: 0.75rem;

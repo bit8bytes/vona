@@ -3,31 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vona - Header</title>
+    <title>Vona - Header with Dropdown</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.amber.min.css"
     />
     <link rel="stylesheet" href="../../dist/blocks/header.css" />
   </head>
-  <body class="vona container">
-    <header data-block="header">
-      <a aria-label="Vona homepage" data-discover="true" href="#"> Vona </a>
-      <nav>
+  <body class="vona">
+    <header class="header">
+      <div class="header__logo">
+        <a href="#" aria-label="Vona homepage">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-square-code"
+          >
+            <path d="m10 9-3 3 3 3" />
+            <path d="m14 15 3-3-3-3" />
+            <rect x="3" y="3" width="18" height="18" rx="2" />
+          </svg>
+          <span>Vona</span>
+        </a>
+      </div>
+
+      <nav class="header__nav-primary">
         <ul>
-          <li><a href="#about" class="secondary">About</a></li>
+          <li><a href="#blocks" class="secondary">Blocks</a></li>
+          <li><a href="#docs" class="secondary">Docs</a></li>
+          <li><a href="#pricing" class="secondary">Pricing</a></li>
+          <li><a href="#company" class="secondary">Company</a></li>
+        </ul>
+      </nav>
+
+      <nav class="header__nav-auth">
+        <ul>
+          <li><a href="#sign-in" class="secondary">Sign In</a></li>
           <li>
-            <a href="#sign-up"><button class="secondary">Sign Up</button></a>
+            <a href="#sign-up"><button>Sign Up</button></a>
           </li>
         </ul>
       </nav>
+
+      <details class="header__mobile-menu">
+        <summary aria-label="Toggle menu">☰</summary>
+        <ul>
+          <li><a href="#blocks" class="secondary">Blocks</a></li>
+          <li><a href="#docs" class="secondary">Docs</a></li>
+          <li><a href="#pricing" class="secondary">Pricing</a></li>
+          <li><a href="#company" class="secondary">Company</a></li>
+          <li class="header__mobile-menu-auth">
+            <button class="secondary">Sign Up</button>
+            <button>Sign In</button>
+          </li>
+        </ul>
+      </details>
     </header>
+
     <main>
       <br />
-      <br />
-      <br />
-      <br />
       <h1>Hello from Vona!</h1>
+      <p>Whoop!</p>
     </main>
   </body>
 </html>
