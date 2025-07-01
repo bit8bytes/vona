@@ -13,17 +13,19 @@
   padding-right: var(--pico-spacing);
   border-bottom: var(--pico-border-width) solid var(--pico-muted-border-color);
   background-color: var(--pico-background-color);
-  font-size: calc(0.6125 * var(--pico-font-size));
 }
 
 .vona .header__logo {
   display: flex;
   align-items: center;
   margin-right: var(--pico-spacing);
-  font-weight: 600;
+  font-weight: 800;
 }
 
 .vona .header__logo a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
   text-decoration-color: transparent;
 }
 
@@ -41,21 +43,12 @@
   margin: 0;
 }
 
-.vona .header__nav-auth button {
-  font-size: calc(0.6125 * var(--pico-font-size));
-}
-
 /* Mobile Menu */
 .vona .header__mobile-menu {
   display: none;
 }
 
 @media (max-width: 768px) {
-  .vona .header,
-  .vona .header__nav-auth button {
-    font-size: calc(0.8125 * var(--pico-font-size));
-  }
-
   .vona .header__nav-primary,
   .vona .header__nav-auth {
     display: none;
@@ -64,7 +57,6 @@
   .vona .header__mobile-menu {
     display: flex;
     align-items: center;
-    /* position: relative; */
     z-index: 100;
   }
 
@@ -127,9 +119,5 @@
 
   .vona .header__mobile-menu a:hover {
     color: var(--pico-color);
-  }
-
-  .vona .header__mobile-menu-auth button {
-    font-size: calc(0.8125 * var(--pico-font-size));
   }
 }
