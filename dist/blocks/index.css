@@ -10,3 +10,18 @@
   /* Header height*/
   padding-top: calc(6 * var(--pico-spacing));
 }
+
+.vona mark {
+  background: linear-gradient(
+    90deg,
+    var(--pico-primary) 60%,
+    var(--pico-primary-focus) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  padding: 0.125rem 0.25rem;
+  border-radius: var(--pico-border-radius);
+  font-weight: 800;
+}
