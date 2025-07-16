@@ -83,8 +83,8 @@ If you are interested in contributing to Vona CSS, please send a email to <a hre
 
 ## Pages that use Vona
 
-- [Goalkeepr](https://goalkeepr.io)
-- [Filmlet](https://filmlet.app)
+- <a href="https://goalkeepr.io" target="_blank">Goalkeepr</a>
+- <a href="https://filmlet.app" target="_blank">Filmlet</a>
 
 ## Copyright and license
 
