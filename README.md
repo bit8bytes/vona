@@ -38,7 +38,7 @@ Alternatively, you can use jsDelivr CDN to link pico.css and vona.css.
 />
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/bit8bytes/vona@v0.0.3/dist/vona.min.css"
+  href="https://cdn.jsdelivr.net/gh/bit8bytes/vona@v0.0.8/dist/vona.min.css"
 />
 ```
 
