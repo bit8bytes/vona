@@ -1,12 +1,4 @@
 /* hero.css */
-.vona {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 /* Optional background SVG positioning */
 .vona .hero__background {
   position: absolute;
@@ -50,4 +42,64 @@
   gap: 1rem;
   padding: 0;
   list-style: none;
+}
+
+/* Hero img right section block */
+.vona .hero-img-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6rem;
+  padding-block: 6rem;
+  padding-inline: 2rem;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.vona .hero-img-right__content {
+  text-align: left;
+  max-width: 42rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+/* CTA menu buttons */
+.vona .hero-img-right__menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+/* Image styling */
+.vona .hero-img-right__img {
+  flex: 0 0 auto;
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--pico-muted-color);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .vona .hero-img-right {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .vona .hero-img-right__content {
+    margin-inline: 0;
+  }
+
+  .vona .hero-img-right__img {
+    max-width: 100%;
+  }
 }
