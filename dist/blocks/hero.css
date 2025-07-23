@@ -80,11 +80,18 @@
 /* Image styling */
 .vona .hero-img-right__img {
   flex: 0 0 auto;
-  width: 400px;
-  height: 300px;
+  width: 550px;
+  height: 400px;
   object-fit: cover;
   border-radius: 8px;
   border: 1px solid var(--pico-muted-color);
+}
+
+@media (max-width: 1024px) {
+  .vona .hero-img-right__img {
+    width: 450px;
+    height: 300px;
+  }
 }
 
 /* Mobile responsive */
@@ -101,5 +108,7 @@
 
   .vona .hero-img-right__img {
     max-width: 100%;
+    width: 350px;
+    height: 300px;
   }
 }
