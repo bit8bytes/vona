@@ -11,13 +11,16 @@
 
 /* Hero section block */
 .vona .hero {
-  padding-block: 6rem;
+  min-height: 100vh;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
   padding-inline: 2rem;
   text-align: center;
   max-width: 42rem;
   margin-inline: auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   position: relative;
   z-index: 1;
 }
@@ -47,24 +50,32 @@
 /* Hero img right section block */
 .vona .hero-img-right {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  overflow-x: hidden;
+}
+
+.vona .hero-img-right__container {
+  display: flex;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 6rem;
-  padding-block: 6rem;
-  padding-inline: 2rem;
   max-width: 1200px;
-  margin-inline: auto;
+  margin: 0 auto;
+  padding-inline: 2rem;
 }
 
 .vona .hero-img-right__content {
   text-align: left;
   max-width: 42rem;
-  margin-inline: auto;
   display: flex;
   flex-direction: column;
-  position: relative;
-  z-index: 1;
+  justify-content: center;
+  flex: 1;
+  margin-top: 4rem;
+  gap: 2rem;
 }
 
 /* CTA menu buttons */
@@ -79,36 +90,42 @@
 
 /* Image styling */
 .vona .hero-img-right__img {
-  flex: 0 0 auto;
-  width: 550px;
-  height: 400px;
+  width: 50vw;
+  min-width: 600px;
+  height: calc(100vh - 6rem);
+  max-height: 800px;
   object-fit: cover;
-  border-radius: 8px;
-  border: 1px solid var(--pico-muted-color);
+  border-radius: 8px 0 0 0;
+  margin-bottom: -6rem;
+  margin-right: -2rem;
 }
 
 @media (max-width: 1024px) {
+  .vona .hero-img-right__container {
+    padding-inline: 2rem;
+    max-width: 42rem;
+    justify-content: center;
+  }
+  
   .vona .hero-img-right__img {
-    width: 450px;
-    height: 300px;
+    display: none;
   }
 }
 
 /* Mobile responsive */
 @media (max-width: 768px) {
   .vona .hero-img-right {
-    flex-direction: column;
-    gap: 2rem;
-    text-align: center;
+    min-height: auto;
+    padding-block: 4rem;
   }
-
+  
+  .vona .hero-img-right__container {
+    text-align: center;
+    padding-inline: 2rem;
+    justify-content: center;
+  }
+  
   .vona .hero-img-right__content {
     margin-inline: 0;
-  }
-
-  .vona .hero-img-right__img {
-    max-width: 100%;
-    width: 350px;
-    height: 300px;
   }
 }
