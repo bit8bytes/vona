@@ -14,7 +14,7 @@
     <!-- Header -->
     <header class="header">
       <div class="header__logo">
-        <a href="#" aria-label="Vona homepage">
+        <a href="#" aria-label="Vona homepage" class="secondary">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -31,7 +31,7 @@
             <path d="m14 15 3-3-3-3" />
             <rect x="3" y="3" width="18" height="18" rx="2" />
           </svg>
-          <span>Vona</span>
+          <span>Vona<mark>.</mark></span>
         </a>
       </div>
 
@@ -70,59 +70,13 @@
 
     <main>
       <!-- Hero -->
-      <div class="hero">
-        <div class="hero__background">
-          <svg
-            class="background-svg"
-            viewBox="0 0 1200 800"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs>
-              <!-- Grid pattern -->
-              <pattern
-                id="gridPattern"
-                width="40"
-                height="40"
-                patternUnits="userSpaceOnUse"
-              >
-                <path
-                  d="M 40 0 L 0 0 0 40"
-                  fill="none"
-                  stroke="rgba(148, 163, 184, 0.15)"
-                  stroke-width="1"
-                />
-              </pattern>
-              <!-- Radial fade mask -->
-              <radialGradient id="fadeGradient" cx="50%" cy="50%" r="60%">
-                <stop offset="0%" style="stop-color: white; stop-opacity: 1" />
-                <stop
-                  offset="70%"
-                  style="stop-color: white; stop-opacity: 0.8"
-                />
-                <stop
-                  offset="100%"
-                  style="stop-color: white; stop-opacity: 0"
-                />
-              </radialGradient>
-              <mask id="fadeMask">
-                <rect width="100%" height="100%" fill="url(#fadeGradient)" />
-              </mask>
-            </defs>
-            <!-- Grid background with radial fade -->
-            <rect
-              width="100%"
-              height="100%"
-              fill="url(#gridPattern)"
-              mask="url(#fadeMask)"
-            />
-          </svg>
-        </div>
-
-        <section class="hero__content">
+      <div class="hero-img-right">
+      <div class="hero-img-right__container">
+        <section class="hero-img-right__content">
           <hgroup class="hero__heading">
             <h1>
-              Launch fast with <mark>plug-and-play</mark> <br />landing page
-              <mark>UI blocks</mark>.
+              The world's simplest <br />
+              landing page<mark>UI blocks</mark>.
             </h1>
             <p>
               Vona helps developers and entrepreneurs validate ideas quickly
@@ -131,15 +85,57 @@
             </p>
           </hgroup>
 
-          <menu class="hero__menu">
-            <li><a href="#get-started" role="button">Get Started</a></li>
-            <li><a href="#docs" class="secondary">Read Docs</a></li>
-          </menu>
+          <form class="hero-img-right__menu">
+            <fieldset role="group">
+              <input
+                id="newsletter-email"
+                name="email"
+                type="email"
+                placeholder="Enter your email"
+                autocomplete="email"
+                required
+              />
+              <input type="submit" value="Subscribe" />
+            </fieldset>
+          </form>
         </section>
       </div>
+      <img
+        class="hero-img-right__img"
+        src="./examples/blocks/image.png"
+        alt="https://unsplash.com/photos/photo-of-mountain-alps-a562ZEFKW8I"
+      />
+    </div>
+
+    <section class="social-proof" data-theme="light">
+      <div class="social-proof__container">
+        <p class="social-proof__headline">
+          Trusted by over 2.5 million users and companies
+        </p>
+        
+        <!-- Social Proof -->
+        <div class="social-proof__slider">
+          <div class="social-proof__track">
+            <div class="social-proof__company" style="--delay: 0;">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google" />
+            </div>
+            <div class="social-proof__company" style="--delay: 1;">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/microsoft.svg" alt="Microsoft" />
+            </div>
+            <div class="social-proof__company" style="--delay: 2;">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" alt="Apple" />
+            </div>
+            <div class="social-proof__company" style="--delay: 3;">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/amazon.svg" alt="Amazon" />
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
 
       <!-- Features -->
-      <section class="features" aria-label="features">
+      <section class="features" aria-label="features" data-theme="light">
         <hgroup>
           <h2>Launch Pages. Instantly.</h2>
           <p>
@@ -167,9 +163,7 @@
             </svg>
             <h3>Prebuilt Blocks</h3>
             <p>
-              From hero sections to feature lists, Vona gives you well-designed
-              building blocks you can mix, match, and customize in seconds. No
-              design skills required.
+              Well-designed building blocks you can mix, match, and customize in seconds.
             </p>
           </article>
 
@@ -193,9 +187,7 @@
             </svg>
             <h3>Drop-in Simplicity</h3>
             <p>
-              No bundlers, no setup, no friction. Just copy the markup and
-              you're live. Perfect for makers, hackers, and early-stage
-              projects.
+              Just copy the markup and you're live. Perfect for makers and early-stage projects.
             </p>
           </article>
 
@@ -218,36 +210,27 @@
             </svg>
             <h3>Lightweight by Design</h3>
             <p>
-              Vona stays out of your way. It's minimal, class-light, and built
-              to complement Pico—not replicate it. Your HTML stays readable and
-              your pages stay fast.
+              Minimal and class-light. Built to complement Pico while keeping your pages fast.
             </p>
           </article>
         </div>
       </section>
 
-      <!-- Newsletter -->
-      <section class="newsletter" aria-label="newsletter">
-        <hgroup class="newsletter__heading">
-          <h2>Newsletter</h2>
-          <p>Join our community of subscribers and receive regular updates</p>
+      <!-- CTA -->
+      <section class="cta" aria-label="Call to action">
+        <hgroup class="cta__heading">
+          <h2>Ready to get started<mark>?</mark></h2>
+          <p>Join other developers who trust Vona for their landing pages.</p>
         </hgroup>
 
-        <form class="newsletter__form">
-          <label for="newsletter-email">Email address</label>
-          <fieldset role="group">
-            <input
-              id="newsletter-email"
-              name="email"
-              type="email"
-              placeholder="Enter your email"
-              autocomplete="email"
-              required
-            />
-            <input type="submit" value="Subscribe" />
-          </fieldset>
-        </form>
+        <menu class="cta__menu">
+          <li><a href="#get-started" role="button">Get Started</a></li>
+          <li>
+            <a href="#learn-more" role="button" class="secondary">Learn More</a>
+          </li>
+        </menu>
       </section>
+
     </main>
 
     <!-- Footer -->
@@ -255,18 +238,27 @@
       <section class="footer__links">
         <nav class="container">
           <ul>
-            <li><strong>About</strong></li>
+            <li><strong>Blocks<mark>.</mark></strong></li>
+            <li><a class="secondary" href="#">Header</a></li>
+            <li><a class="secondary" href="#">Hero</a></li>
+            <li><a class="secondary" href="#">Social Proof</a></li>
+            <li><a class="secondary" href="#">Features</a></li>
+            <li><a class="secondary" href="#">Newsletter</a></li>
+            <li><a class="secondary" href="#">Footer</a></li>
+          </ul>
+          <ul>
+            <li><strong>About<mark>.</mark></strong></li>
             <li><a class="secondary" href="#">What's new?</a></li>
             <li><a class="secondary" href="#">Brand</a></li>
             <li><a class="secondary" href="#">Mission</a></li>
           </ul>
           <ul>
-            <li><strong>Docs</strong></li>
+            <li><strong>Docs<mark>.</mark></strong></li>
             <li><a class="secondary" href="#">Quick start</a></li>
             <li><a class="secondary" href="#">Blocks</a></li>
           </ul>
           <ul>
-            <li><strong>Community</strong></li>
+            <li><strong>Community<mark>.</mark></strong></li>
             <li><a class="secondary" href="#">Issues</a></li>
             <li><a class="secondary" href="#">Discussions</a></li>
             <li><a class="secondary" href="#">Help</a></li>

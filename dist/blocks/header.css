@@ -3,6 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  height: 72px;
   z-index: 100;
   display: flex;
   position: fixed;
@@ -20,6 +21,7 @@
   align-items: center;
   margin-right: var(--pico-spacing);
   font-weight: 800;
+  font-family: Verdana, "Times New Roman", serif;
 }
 
 .vona .header__logo a {

@@ -1,0 +1,150 @@
+/* social-proof.css */
+.vona .social-proof {
+  margin: 0;
+  padding-block: 6rem;
+  padding-inline: 2rem;
+  text-align: center;
+  background-color: var(--pico-background-color);
+  border-top: 1px solid var(--pico-muted-border-color);
+}
+
+.vona .social-proof__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vona .social-proof__headline {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--pico-muted-color);
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.vona .social-proof__slider {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+/* Scrolling version for many logos */
+.vona .social-proof__slider.scrolling {
+  mask: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+
+.vona .social-proof__track {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+/* Scrolling animation for many logos */
+.vona .social-proof__slider.scrolling .social-proof__track {
+  display: inline-flex;
+  animation: slide-left 20s linear infinite;
+  width: max-content;
+  justify-content: flex-start;
+}
+
+.vona .social-proof__company {
+  flex-shrink: 0;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  filter: grayscale(100%);
+}
+
+.vona .social-proof__company:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+.vona .social-proof__company img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Animation for endless right-to-left sliding */
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Light theme variant for contrast */
+.vona .social-proof[data-theme="light"] {
+  background-color: var(--pico-card-background-color);
+  border-top: 1px solid var(--pico-muted-border-color);
+}
+
+.vona .social-proof[data-theme="light"] .social-proof__headline {
+  color: var(--pico-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .vona .social-proof {
+    padding-block: 4rem;
+  }
+
+  .vona .social-proof__headline {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+  }
+
+  .vona .social-proof__slider.scrolling .social-proof__track {
+    gap: 3rem;
+    animation-duration: 15s;
+  }
+
+  .vona .social-proof__slider:not(.scrolling) .social-proof__track {
+    gap: 2rem;
+  }
+
+  .vona .social-proof__company img {
+    height: 32px;
+  }
+}
+
+/* Pause animation on hover for scrolling version */
+.vona .social-proof__slider.scrolling:hover .social-proof__track {
+  animation-play-state: paused;
+}
+
+/* Static version for few logos (3-5) */
+.vona .social-proof__slider:not(.scrolling) .social-proof__company {
+  animation: gentle-highlight 4s ease-in-out infinite;
+  animation-delay: calc(var(--delay, 0) * 1s);
+}
+
+@keyframes gentle-highlight {
+  0%,
+  70%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  35% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
