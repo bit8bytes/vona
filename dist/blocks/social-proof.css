@@ -11,15 +11,9 @@
 .vona .social-proof__container {
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.vona .social-proof__headline {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--pico-muted-color);
-  margin-bottom: 3rem;
-  max-width: 600px;
-  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--pico-spacing);
 }
 
 .vona .social-proof__slider {
