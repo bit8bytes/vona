@@ -18,9 +18,8 @@
     var(--pico-card-background-color) 95%,
     var(--pico-muted-color) 5%
   );
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
+  width: 100%;
+  max-width: 100vw;
   padding-inline: 2rem;
 }
 
