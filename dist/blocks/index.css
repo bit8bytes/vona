@@ -8,7 +8,8 @@
 
 .vona main {
   /* Header height*/
-  padding-top: calc(6 * var(--pico-spacing));
+  padding-top: 72px;
+  padding-bottom: 0;
 }
 
 .vona mark {
