@@ -13,57 +13,71 @@
   <body class="vona">
     <!-- Header -->
     <header class="header">
-      <div class="header__logo">
-        <a href="#" aria-label="Vona homepage" class="secondary">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-square-code"
-          >
-            <path d="m10 9-3 3 3 3" />
-            <path d="m14 15 3-3-3-3" />
-            <rect x="3" y="3" width="18" height="18" rx="2" />
-          </svg>
-          <span>Vona<mark>.</mark></span>
-        </a>
-      </div>
+      <!-- Logo -->
+      <a href="#" aria-label="Vona homepage" class="secondary">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-file-code-icon lucide-file-code"
+        >
+          <path d="M10 12.5 8 15l2 2.5" />
+          <path d="m14 12.5 2 2.5-2 2.5" />
+          <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+          <path
+            d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"
+          />
+        </svg>
+        <span>Vona</span>
+      </a>
 
-      <nav class="header__nav-primary">
+      <!-- Center Navigation e.g. Links -->
+      <nav>
         <ul>
-          <li><a href="#blocks" class="secondary">Blocks</a></li>
-          <li><a href="#docs" class="secondary">Docs</a></li>
-          <li><a href="#pricing" class="secondary">Pricing</a></li>
-          <li><a href="#company" class="secondary">Company</a></li>
-        </ul>
-      </nav>
-
-      <nav class="header__nav-auth">
-        <ul>
-          <li><a href="#sign-in" class="secondary">Sign In</a></li>
           <li>
-            <a href="#sign-up"><button>Sign Up</button></a>
+            <a href="#blocks" class="secondary"><small>Blocks</small></a>
+          </li>
+          <li>
+            <a href="#docs" class="secondary"><small>Docs</small></a>
+          </li>
+          <li>
+            <a href="#pricing" class="secondary"><small> Pricing</small></a>
+          </li>
+          <li>
+            <a href="#company" class="secondary"><small>Company</small></a>
           </li>
         </ul>
       </nav>
 
-      <details class="header__mobile-menu">
+      <!-- Right Navigation e.g. CTA buttons -->
+      <nav>
+        <ul>
+          <li>
+            <a href="#sign-in" class="secondary"><small>Sign In</small></a>
+          </li>
+          <li>
+            <a href="#sign-up"><small>Sign Up</small></a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Navigation -->
+      <details>
         <summary aria-label="Toggle menu">☰</summary>
         <ul>
           <li><a href="#blocks" class="secondary">Blocks</a></li>
           <li><a href="#docs" class="secondary">Docs</a></li>
           <li><a href="#pricing" class="secondary">Pricing</a></li>
           <li><a href="#company" class="secondary">Company</a></li>
-          <li class="header__mobile-menu-auth">
-            <button class="secondary">Sign Up</button>
-            <button>Sign In</button>
-          </li>
+          <hr />
+          <li><a class="secondary">Sign Up</a></li>
+          <li><a>Sign In</a></li>
         </ul>
       </details>
     </header>
@@ -71,66 +85,77 @@
     <main>
       <!-- Hero -->
       <div class="hero-img-right">
-      <div class="hero-img-right__container">
-        <section class="hero-img-right__content">
-          <hgroup class="hero__heading">
-            <h1>
-              The world's simplest <br />
-              landing page<mark>UI blocks</mark>.
-            </h1>
-            <p>
-              Vona helps developers and entrepreneurs validate ideas quickly
-              with a ready-to-use, dependency-free UI library for simple landing
-              pages and email signups.
-            </p>
-          </hgroup>
+        <div class="hero-img-right__container">
+          <section class="hero-img-right__content">
+            <hgroup class="hero__heading">
+              <h1>
+                The world's simplest <br />
+                landing page<mark>UI blocks</mark>.
+              </h1>
+              <p>
+                Vona helps developers and entrepreneurs validate ideas quickly
+                with a ready-to-use, dependency-free UI library for simple
+                landing pages and email signups.
+              </p>
+            </hgroup>
 
-          <form class="hero-img-right__menu">
-            <fieldset role="group">
-              <input
-                id="newsletter-email"
-                name="email"
-                type="email"
-                placeholder="Enter your email"
-                autocomplete="email"
-                required
-              />
-              <input type="submit" value="Subscribe" />
-            </fieldset>
-          </form>
-        </section>
+            <form class="hero-img-right__menu">
+              <fieldset role="group">
+                <input
+                  id="newsletter-email"
+                  name="email"
+                  type="email"
+                  placeholder="Enter your email"
+                  autocomplete="email"
+                  required
+                />
+                <input type="submit" value="Subscribe" />
+              </fieldset>
+            </form>
+          </section>
+        </div>
+        <img
+          class="hero-img-right__img"
+          src="./examples/blocks/image.png"
+          alt="https://unsplash.com/photos/photo-of-mountain-alps-a562ZEFKW8I"
+        />
       </div>
-      <img
-        class="hero-img-right__img"
-        src="./examples/blocks/image.png"
-        alt="https://unsplash.com/photos/photo-of-mountain-alps-a562ZEFKW8I"
-      />
-    </div>
 
-    <section class="social-proof" data-theme="light">
-      <div class="social-proof__container">
-        <h4>Trusted by over 2.5 million users and companies</h4>
-        
-        <!-- Social Proof -->
-        <div class="social-proof__slider">
-          <div class="social-proof__track">
-            <div class="social-proof__company" style="--delay: 0;">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google" />
-            </div>
-            <div class="social-proof__company" style="--delay: 1;">
-              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/microsoft.svg" alt="Microsoft" />
-            </div>
-            <div class="social-proof__company" style="--delay: 2;">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" alt="Apple" />
-            </div>
-            <div class="social-proof__company" style="--delay: 3;">
-              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/amazon.svg" alt="Amazon" />
+      <section class="social-proof" data-theme="light">
+        <div class="social-proof__container">
+          <h4>Trusted by over 2.5 million users and companies</h4>
+
+          <!-- Social Proof -->
+          <div class="social-proof__slider">
+            <div class="social-proof__track">
+              <div class="social-proof__company" style="--delay: 0">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg"
+                  alt="Google"
+                />
+              </div>
+              <div class="social-proof__company" style="--delay: 1">
+                <img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/microsoft.svg"
+                  alt="Microsoft"
+                />
+              </div>
+              <div class="social-proof__company" style="--delay: 2">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg"
+                  alt="Apple"
+                />
+              </div>
+              <div class="social-proof__company" style="--delay: 3">
+                <img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/amazon.svg"
+                  alt="Amazon"
+                />
+              </div>
             </div>
           </div>
         </div>
-        </div>
-      </div>
-    </section>
+      </section>
 
       <!-- Features -->
       <section class="features" aria-label="features" data-theme="light">
@@ -161,7 +186,8 @@
             </svg>
             <h3>Prebuilt Blocks</h3>
             <p>
-              Well-designed building blocks you can mix, match, and customize in seconds.
+              Well-designed building blocks you can mix, match, and customize in
+              seconds.
             </p>
           </article>
 
@@ -185,7 +211,8 @@
             </svg>
             <h3>Drop-in Simplicity</h3>
             <p>
-              Just copy the markup and you're live. Perfect for makers and early-stage projects.
+              Just copy the markup and you're live. Perfect for makers and
+              early-stage projects.
             </p>
           </article>
 
@@ -208,7 +235,8 @@
             </svg>
             <h3>Lightweight by Design</h3>
             <p>
-              Minimal and class-light. Built to complement Pico while keeping your pages fast.
+              Minimal and class-light. Built to complement Pico while keeping
+              your pages fast.
             </p>
           </article>
         </div>
@@ -228,7 +256,6 @@
           </li>
         </menu>
       </section>
-
     </main>
 
     <!-- Footer -->
@@ -236,7 +263,9 @@
       <section class="footer__links">
         <nav class="container">
           <ul>
-            <li><strong>Blocks<mark>.</mark></strong></li>
+            <li>
+              <strong>Blocks<mark>.</mark></strong>
+            </li>
             <li><a class="secondary" href="#">Header</a></li>
             <li><a class="secondary" href="#">Hero</a></li>
             <li><a class="secondary" href="#">Social Proof</a></li>
@@ -245,18 +274,24 @@
             <li><a class="secondary" href="#">Footer</a></li>
           </ul>
           <ul>
-            <li><strong>About<mark>.</mark></strong></li>
+            <li>
+              <strong>About<mark>.</mark></strong>
+            </li>
             <li><a class="secondary" href="#">What's new?</a></li>
             <li><a class="secondary" href="#">Brand</a></li>
             <li><a class="secondary" href="#">Mission</a></li>
           </ul>
           <ul>
-            <li><strong>Docs<mark>.</mark></strong></li>
+            <li>
+              <strong>Docs<mark>.</mark></strong>
+            </li>
             <li><a class="secondary" href="#">Quick start</a></li>
             <li><a class="secondary" href="#">Blocks</a></li>
           </ul>
           <ul>
-            <li><strong>Community<mark>.</mark></strong></li>
+            <li>
+              <strong>Community<mark>.</mark></strong>
+            </li>
             <li><a class="secondary" href="#">Issues</a></li>
             <li><a class="secondary" href="#">Discussions</a></li>
             <li><a class="secondary" href="#">Help</a></li>
