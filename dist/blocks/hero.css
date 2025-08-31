@@ -1,6 +1,6 @@
 /* hero.css */
 /* Optional background SVG positioning */
-.vona .hero__background {
+.vona .hero > div[data-hero-background="svg"] {
   position: absolute;
   top: 0;
   left: 0;
@@ -12,12 +12,9 @@
 /* Hero section block */
 .vona .hero {
   min-height: 100vh;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  padding-inline: 2rem;
+  width: 100%;
+  padding-inline: 6rem;
   text-align: center;
-  max-width: 42rem;
-  margin-inline: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,24 +22,30 @@
   z-index: 1;
 }
 
-/* Heading group */
-.vona .hero__heading {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+/* Hero section content wrapper */
+.vona .hero > section {
+  margin: 0 auto;
 }
 
-.vona .hero__heading h1 {
+/* Heading group */
+.vona .hero > section > hgroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pico-spacing);
+}
+
+/* Font size heading headline (h1) */
+.vona .hero > section > hgroup > h1 {
   font-size: 2.5rem;
 }
 
 /* CTA menu buttons */
-.vona .hero__menu {
+.vona .hero > section > menu {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: var(--pico-spacing);
   padding: 0;
   list-style: none;
 }
@@ -101,12 +104,22 @@
 }
 
 @media (max-width: 1024px) {
+  /* Hero section block */
+  .vona .hero {
+    padding-inline: var(--pico-spacing);
+  }
+
+  .vona .hero > section {
+    margin: 0 auto;
+    max-width: 42rem; /* Magic number! */
+  }
+
   .vona .hero-img-right__container {
     padding-inline: 2rem;
     max-width: 42rem;
     justify-content: center;
   }
-  
+
   .vona .hero-img-right__img {
     display: none;
   }
@@ -118,13 +131,13 @@
     min-height: auto;
     padding-block: 4rem;
   }
-  
+
   .vona .hero-img-right__container {
     text-align: center;
     padding-inline: 2rem;
     justify-content: center;
   }
-  
+
   .vona .hero-img-right__content {
     margin-inline: 0;
   }

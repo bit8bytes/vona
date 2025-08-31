@@ -9,13 +9,11 @@
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.blue.min.css"
     />
     <link rel="stylesheet" href="../../dist/blocks/hero.css" />
-    <link rel="stylesheet" href="hero-background.css" />
-    <link rel="stylesheet" href="../../dist/blocks/social-proof.css" />
     <link rel="stylesheet" href="../../dist/blocks/index.css" />
   </head>
   <body class="vona">
     <div class="hero">
-      <div class="hero__background">
+      <div data-hero-background="svg">
         <svg
           class="background-svg"
           viewBox="0 0 1200 800"
@@ -56,8 +54,8 @@
         </svg>
       </div>
 
-      <section class="hero__content">
-        <hgroup class="hero__heading">
+      <section>
+        <hgroup>
           <h1>
             The world's simplest <br />
             landing page<mark>UI blocks</mark>.
@@ -69,7 +67,7 @@
           </p>
         </hgroup>
 
-        <menu class="hero__menu">
+        <menu>
           <li><a href="#get-started" role="button">Get Started</a></li>
           <li><a href="#docs" class="secondary">Read Docs</a></li>
         </menu>
