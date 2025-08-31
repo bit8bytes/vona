@@ -25,6 +25,7 @@
 /* Hero section content wrapper */
 .vona .hero > section {
   margin: 0 auto;
+  max-width: 42rem;
 }
 
 /* Heading group */
@@ -107,11 +108,6 @@
   /* Hero section block */
   .vona .hero {
     padding-inline: var(--pico-spacing);
-  }
-
-  .vona .hero > section {
-    margin: 0 auto;
-    max-width: 42rem; /* Magic number! */
   }
 
   .vona .hero-img-right__container {
