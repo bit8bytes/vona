@@ -1,12 +1,17 @@
 /* newsletter.css */
 .vona .newsletter {
-  padding-block: 6rem;
+  margin: 6rem;
   text-align: left;
-  padding-inline: 2rem;
   max-width: 36rem;
   margin-inline: auto;
   display: flex;
   flex-direction: column;
+}
+
+.newsletter > article {
+  padding: calc(2 * var(--pico-spacing));
+  border: var(--pico-border-width) solid
+    color-mix(in srgb, var(--pico-muted-color) 30%, transparent);
 }
 
 /* Heading box */
@@ -19,33 +24,4 @@
   border-bottom: none;
   padding: 2rem;
   margin: 0;
-}
-
-/* Form container */
-.vona .newsletter__form {
-  display: flex;
-  flex-direction: row;
-  gap: var(--pico-spacing);
-  align-items: start;
-  background-color: var(--pico-card-background-color);
-  border-bottom-left-radius: var(--pico-border-radius);
-  border-bottom-right-radius: var(--pico-border-radius);
-  border: var(--pico-border-width) solid
-    color-mix(in srgb, var(--pico-muted-color) 30%, transparent);
-  border-top: none;
-  padding-inline: 2rem;
-  padding-bottom: 2rem;
-}
-
-/* Visually hidden label for accessibility */
-.vona .newsletter__form label {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  clip: rect(0, 0, 0, 0) !important;
-  white-space: nowrap !important;
-  border: 0 !important;
 }
