@@ -3,48 +3,39 @@
   padding-block: 6rem;
   text-align: center;
   padding-inline: 2rem;
-  max-width: 42rem;
   margin: 0;
-  margin-inline: auto;
   display: flex;
   flex-direction: column;
   gap: var(--pico-typography-spacing-vertical);
 }
 
-/* Light theme variant with different background */
 .vona .features[data-theme="light"] {
   background-color: color-mix(
     in srgb,
     var(--pico-card-background-color) 95%,
     var(--pico-muted-color) 5%
   );
-  width: 100%;
-  max-width: 100vw;
-  padding-inline: 2rem;
 }
 
-/* Override the default max-width constraint for light theme */
-.vona .features[data-theme="light"] {
-  max-width: none;
+.vona .features {
+  background-color: color-mix(
+    in srgb,
+    var(--pico-card-background-color) 95%,
+    var(--pico-muted-color) 5%
+  );
 }
 
-.vona .features[data-theme="light"] > * {
+.vona .features > div {
   max-width: 42rem;
-  margin-inline: auto;
 }
 
-/* Feature articles */
-.vona .features__grid article {
-  border-radius: var(--pico-border-radius);
-  border: var(--pico-border-width) solid
-    color-mix(in srgb, var(--pico-muted-color) 30%, transparent);
+.vona .features > div > div > article {
   text-align: left;
-  padding: var(--pico-spacing);
 }
 
-.vona .features__grid article svg {
-  width: 48px;
-  height: 48px;
+.vona .features > div > div > article > svg {
+  width: 36px;
+  height: 36px;
   margin-bottom: 1rem;
-  color: var(--pico-primary);
+  color: var(--pico-primary-background);
 }
