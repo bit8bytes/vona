@@ -79,7 +79,7 @@ Alternatively, you can use jsDelivr CDN to link pico.css and vona.css.
 
 ## Contributing
 
-If you are interested in contributing to Vona CSS, please send a email to <a href="mailto:gleiter.tobias@gmail.com">gleiter.tobias@gmail.com</a>.
+If you are interested in contributing to Vona CSS, please send an email to <a href="mailto:gleiter.tobias@gmail.com">gleiter.tobias@gmail.com</a>.
 
 ## Pages that use Vona
 
