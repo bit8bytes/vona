@@ -11,13 +11,15 @@
   background-color: var(--pico-background-color);
   padding: var(--pico-spacing);
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 2rem;
 }
 
 /* Logo */
 .vona .header > a {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 4px;
   font-weight: 800;
   font-family: Verdana, "Times New Roman", serif;
