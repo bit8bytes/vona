@@ -11,8 +11,13 @@
   background-color: var(--pico-background-color);
   padding: var(--pico-spacing);
   align-items: center;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: space-between;
+}
+
+.vona .header > nav:nth-of-type(1) {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* Logo */
